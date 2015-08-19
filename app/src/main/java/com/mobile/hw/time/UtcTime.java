@@ -11,6 +11,8 @@ package com.mobile.hw.time;
 
 public class UtcTime extends TimeSubject {
 
+    private int utcZeroTime;
+
     @Override
     public void notifyAllClocks() {
         for (Clock clock : clocks.values()) {
