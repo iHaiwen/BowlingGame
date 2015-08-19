@@ -26,5 +26,6 @@ public class UtcTime extends TimeSubject {
 
     public void setUtcZeroTime(int utcZeroTime) {
         this.utcZeroTime = utcZeroTime;
+        notifyAllClocks();
     }
 }
