@@ -19,4 +19,12 @@ public class UtcTime extends TimeSubject {
             clock.setLocalTime(Clock.toLocaleTime(this.utcZeroTime));
         }
     }
+
+    public int getUtcZeroTime() {
+        return utcZeroTime;
+    }
+
+    public void setUtcZeroTime(int utcZeroTime) {
+        this.utcZeroTime = utcZeroTime;
+    }
 }
