@@ -6,8 +6,15 @@ package com.mobile.hw.time;
  * Date: 8/19/15
  * Time: 2:59 PM
  * <p/>
- * TODO: Add a header comment!
+ * 描述时区？
  */
 
-public class UtcTime {
+public class UtcTime extends TimeSubject {
+
+    @Override
+    public void notifyAllClocks() {
+        for (Clock clock : clocks.values()) {
+            clock.setLocalTime(Clock.toLocaleTime(this.utcZeroTime));
+        }
+    }
 }
