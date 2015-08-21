@@ -10,11 +10,13 @@ package com.mobile.hw.ttdtime;
  */
 
 public class CityClock {
+    //TODO 构造函数和PhoneClock一样，重复了
     public CityClock(int utcOffset) {
 
     }
 
+    //TODO-working-on 返回值写死
     public int getTime() {
-        return 1;
+        return this.utcOffset + this.utcZeroTime;
     }
 }
