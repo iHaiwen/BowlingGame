@@ -22,7 +22,6 @@ import org.robolectric.annotation.Config;
 @Config(constants = BuildConfig.class, emulateSdk = 21)
 public class HotelWorldClocksTest {
 
-    //TODO 负值的时区
     //TODO 测试多个时区
 
     @Test
@@ -35,5 +34,20 @@ public class HotelWorldClocksTest {
         phoneClock.setTime(9);
         //Assert
         Assert.assertEquals(1, londonClock.getTime());
+    }
+
+    //TODO-working-on 负值的时区
+    @Test
+    public void theTimeOfClockNewYorkShouldBe20AfterThePhoneClockIsSetTo9BeijingTime() {
+        //Arrange
+        CityClock newYorkClock = new CityClock(-5);
+        PhoneClock phoneClock = new PhoneClock(8);
+
+        //Act
+        phoneClock.setCityClock(newYorkClock);
+        phoneClock.setTime(9);
+
+        //Assert
+        Assert.assertEquals(20, newYorkClock.getTime());
     }
 }
