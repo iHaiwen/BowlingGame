@@ -36,7 +36,6 @@ public class HotelWorldClocksTest {
         Assert.assertEquals(1, londonClock.getTime());
     }
 
-    //TODO-working-on 负值的时区
     @Test
     public void theTimeOfClockNewYorkShouldBe20AfterThePhoneClockIsSetTo9BeijingTime() {
         //Arrange
