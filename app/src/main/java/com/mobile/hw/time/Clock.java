@@ -9,10 +9,11 @@ package com.mobile.hw.time;
  * 时钟类
  */
 
-public abstract class Clock {
+abstract class Clock {
 
-    private static final int UTC_OFFSET = 0;
-    private int localTime = 0;
+    protected static final int UTC_OFFSET = 0;
+    protected int localTime = 0;
+    protected UtcTime utcTime;
 
     public abstract void setLocalTime(int localTime);
 

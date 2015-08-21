@@ -11,7 +11,7 @@ import java.util.HashMap;
  * TODO: Add a header comment!
  */
 
-public abstract class TimeSubject {
+abstract class TimeSubject {
 
     protected final HashMap<String, Clock> clocks = new HashMap<>();
 

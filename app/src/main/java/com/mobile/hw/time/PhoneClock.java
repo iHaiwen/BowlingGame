@@ -9,11 +9,11 @@ package com.mobile.hw.time;
  * 手机时钟
  */
 
-public class PhoneClock extends Clock {
+class PhoneClock extends Clock {
 
     @Override
     public void setLocalTime(int localTime) {
-        this.localTime = localTime;
+        super.localTime = localTime;
         this.utcTime.setUtcZeroTime(localTime - UTC_OFFSET);
     }
 }

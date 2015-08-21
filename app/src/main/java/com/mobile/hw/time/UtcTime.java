@@ -9,7 +9,7 @@ package com.mobile.hw.time;
  * 描述时区？
  */
 
-public class UtcTime extends TimeSubject {
+class UtcTime extends TimeSubject {
 
     private int utcZeroTime;
 
