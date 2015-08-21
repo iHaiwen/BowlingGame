@@ -10,4 +10,7 @@ package com.mobile.hw.ttdtime;
  */
 
 public class CityClock {
+    public CityClock(int utcOffset) {
+
+    }
 }
