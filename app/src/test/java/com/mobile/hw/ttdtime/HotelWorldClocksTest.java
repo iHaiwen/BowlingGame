@@ -22,6 +22,9 @@ import org.robolectric.annotation.Config;
 @Config(constants = BuildConfig.class, emulateSdk = 21)
 public class HotelWorldClocksTest {
 
+    //TODO 负值的时区
+    //TODO 测试多个时区
+
     @Test
     public void theTimeOfClockLondonShouldBe1AfterThePhoneClockIsSetTo9BeijingTime() {
         //Arrange
