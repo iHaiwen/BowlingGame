@@ -10,4 +10,8 @@ package com.mobile.hw.ttdtime;
  */
 
 public class PhoneClock {
+
+    public PhoneClock(int utcOffset) {
+
+    }
 }
