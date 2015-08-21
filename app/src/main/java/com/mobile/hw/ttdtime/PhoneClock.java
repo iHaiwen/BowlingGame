@@ -1,5 +1,7 @@
 package com.mobile.hw.ttdtime;
 
+import com.mobile.hw.time.UtcTime;
+
 /**
  * Created with Android Studio.
  * User: haiwen.li
@@ -11,12 +13,14 @@ package com.mobile.hw.ttdtime;
 
 public class PhoneClock {
 
+    private CityClock cityClock;
+
     public PhoneClock(int utcOffset) {
 
     }
 
     public void setCityClock(CityClock cityClock) {
-
+        this.cityClock = cityClock;
     }
 
     public void setTime(int time) {
