@@ -1,4 +1,6 @@
-package com.mobile.hw.bowlinggame;
+package com.mobile.hw.ttdtime;
+
+import com.mobile.hw.bowlinggame.BuildConfig;
 
 import junit.framework.Assert;
 
