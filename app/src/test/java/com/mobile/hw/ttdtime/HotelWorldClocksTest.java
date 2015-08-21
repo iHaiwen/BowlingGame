@@ -25,6 +25,8 @@ public class HotelWorldClocksTest {
     @Test
     public void theTimeOfClockLondonShouldBe1AfterThePhoneClockIsSetTo9BeijingTime() {
         //Arrange
+        CityClock londonClock = new CityClock(0);
+        PhoneClock phoneClock = new PhoneClock(8);
         //Act
         phoneClock.setCityClock(londonClock);
         phoneClock.setTime(9);
