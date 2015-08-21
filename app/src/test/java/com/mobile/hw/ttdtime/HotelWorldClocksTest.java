@@ -22,8 +22,6 @@ import org.robolectric.annotation.Config;
 @Config(constants = BuildConfig.class, emulateSdk = 21)
 public class HotelWorldClocksTest {
 
-    //TODO 测试多个时区
-
     @Test
     public void theTimeOfClockLondonShouldBe1AfterThePhoneClockIsSetTo9BeijingTime() {
         //Arrange
@@ -47,6 +45,14 @@ public class HotelWorldClocksTest {
         phoneClock.setTime(9);
 
         //Assert
+        Assert.assertEquals(20, newYorkClock.getTime());
+    }
+
+    //TODO-working-on 测试多个时区
+    @Test
+    public void theTimeOfClockLondonAndNewYorkShouldBe1And20RespectivelyAfterThePhoneClockIsSetTo9BeijingTime() {
+        //Assert
+        Assert.assertEquals(1, londonClock.getTime());
         Assert.assertEquals(20, newYorkClock.getTime());
     }
 }
