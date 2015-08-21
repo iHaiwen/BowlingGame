@@ -1,7 +1,5 @@
 package com.mobile.hw.ttdtime;
 
-import com.mobile.hw.time.UtcTime;
-
 /**
  * Created with Android Studio.
  * User: haiwen.li
