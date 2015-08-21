@@ -26,6 +26,8 @@ public class HotelWorldClocksTest {
     public void theTimeOfClockLondonShouldBe1AfterThePhoneClockIsSetTo9BeijingTime() {
         //Arrange
         //Act
+        phoneClock.setCityClock(londonClock);
+        phoneClock.setTime(9);
         //Assert
         Assert.assertEquals(1, londonClock.getTime());
     }
