@@ -18,7 +18,6 @@ public class CityClock {
         this.utcOffset = utcOffset;
     }
 
-    //TODO-working-on 返回值写死
     public int getTime() {
         return this.utcOffset + this.utcZeroTime;
     }
