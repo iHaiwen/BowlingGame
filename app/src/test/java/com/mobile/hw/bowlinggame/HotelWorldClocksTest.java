@@ -1,5 +1,8 @@
 package com.mobile.hw.bowlinggame;
 
+import junit.framework.Assert;
+
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
@@ -16,4 +19,9 @@ import org.robolectric.annotation.Config;
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class, emulateSdk = 21)
 public class HotelWorldClocksTest {
+
+    @Test
+    public void theTimeOfClockLondonShouldBe1AfterThePhoneClockIsSetTo9BeijingTime() {
+        Assert.assertEquals(1, londonClock.getTime());
+    }
 }
