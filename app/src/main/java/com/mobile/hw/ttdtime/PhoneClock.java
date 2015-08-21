@@ -14,9 +14,10 @@ import com.mobile.hw.time.UtcTime;
 public class PhoneClock {
 
     private CityClock cityClock;
+    private int utcOffset;
 
     public PhoneClock(int utcOffset) {
-
+        this.utcOffset = utcOffset;
     }
 
     public void setCityClock(CityClock cityClock) {
