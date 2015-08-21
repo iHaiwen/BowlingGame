@@ -51,6 +51,18 @@ public class HotelWorldClocksTest {
     //TODO-working-on 测试多个时区
     @Test
     public void theTimeOfClockLondonAndNewYorkShouldBe1And20RespectivelyAfterThePhoneClockIsSetTo9BeijingTime() {
+        //
+        CityClock londonClock = new CityClock(0);
+        CityClock newYorkClock = new CityClock(-5);
+        HotelWorldClockSystem hotelWorldClockSystem = new HotelWorldClockSystem();
+        hotelWorldClockSystem.attach(londonClock);
+        hotelWorldClockSystem.attach(newYorkClock);
+        PhoneClock phoneClock = new PhoneClock(8);
+
+        //Act
+        phoneClock.setHotelWorldClockSystem(hotelWorldClockSystem);
+        phoneClock.setTime(9);
+
         //Assert
         Assert.assertEquals(1, londonClock.getTime());
         Assert.assertEquals(20, newYorkClock.getTime());
