@@ -9,7 +9,7 @@ package com.mobile.hw.ttdtime;
  * 描述某一城市的时间
  */
 
-public class CityClock {
+public class CityClock extends Clock {
     private int utcOffset;
     private int utcZeroTime;
 
