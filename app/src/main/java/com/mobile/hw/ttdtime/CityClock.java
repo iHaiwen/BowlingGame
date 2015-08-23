@@ -12,7 +12,6 @@ package com.mobile.hw.ttdtime;
 public class CityClock extends Clock {
     private int utcZeroTime;
 
-    //TODO-working-on 构造函数和PhoneClock一样，重复了
     public CityClock(int utcOffset) {
         super.utcOffset = utcOffset;
     }
