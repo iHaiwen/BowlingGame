@@ -74,6 +74,12 @@ public class HotelWorldClocksTest {
     //TODO the time of the phone clock should be set correctly after its setTime() method is invoked
     @Test
     public void theTimeOfThePhoneClockShouldBeSetCorrectlyAfterItsSetTimeMethodInvoked() {
+        //Arrange
+        PhoneClock phoneClock = new PhoneClock(8);
+
+        //Act
+        phoneClock.setTime(9);
+
         //Assert
         Assert.assertEquals(9, phoneClock.getTime());
     }
