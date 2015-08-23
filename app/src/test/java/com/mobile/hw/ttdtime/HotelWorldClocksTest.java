@@ -82,4 +82,20 @@ public class HotelWorldClocksTest {
         //Assert
         Assert.assertEquals(9, phoneClock.getTime());
     }
+
+    @Test
+    public void theTimeOfClockMoscowShouldBe5AfterThePhoneClockIsSetTo9BeijingTime() {
+        //Arrange
+        CityClock moscowYorkClock = new CityClock(4);
+        HotelWorldClockSystem hotelWorldClockSystem = new HotelWorldClockSystem();
+        hotelWorldClockSystem.attach(moscowYorkClock);
+        PhoneClock phoneClock = new PhoneClock(8);
+
+        //Act
+        phoneClock.setHotelWorldClockSystem(hotelWorldClockSystem);
+        phoneClock.setTime(9);
+
+        //Assert
+        Assert.assertEquals(5, moscowYorkClock.getTime());
+    }
 }
