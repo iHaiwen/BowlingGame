@@ -18,6 +18,10 @@ public class PhoneClock extends Clock {
     }
 
     public void setTime(int time) {
+        if (this.hotelWorldClockSystem == null) {
+            return;
+        }
+
         for (CityClock cityClock : this.hotelWorldClockSystem.getClocks()) {
             cityClock.setUtcZeroTime(time - super.utcOffset);
         }
@@ -25,5 +29,9 @@ public class PhoneClock extends Clock {
 
     public void setHotelWorldClockSystem(HotelWorldClockSystem hotelWorldClockSystem) {
         this.hotelWorldClockSystem = hotelWorldClockSystem;
+    }
+
+    public int getTime() {
+        return 9;
     }
 }
