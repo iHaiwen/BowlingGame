@@ -8,4 +8,5 @@ package com.mobile.hw.ttdtime;
  */
 
 public class Clock {
+    protected int utcOffset;
 }
