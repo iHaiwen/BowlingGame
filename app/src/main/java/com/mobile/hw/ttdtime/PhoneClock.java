@@ -33,6 +33,6 @@ public class PhoneClock extends Clock {
 
     //TODO method getTime on CityClock too
     public int getTime() {
-        return 9;
+        return this.time;
     }
 }
