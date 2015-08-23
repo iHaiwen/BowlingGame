@@ -24,10 +24,12 @@ import org.robolectric.annotation.Config;
 public class HotelWorldClocksTest {
 
     private HotelWorldClockSystem hotelWorldClockSystem;
+    private PhoneClock phoneClock;
 
     @Before
     public void initialize() throws Exception {
         this.hotelWorldClockSystem = new HotelWorldClockSystem();
+        this.phoneClock = new PhoneClock(8);
     }
 
     @Test
@@ -35,7 +37,6 @@ public class HotelWorldClocksTest {
         //Arrange
         CityClock londonClock = new CityClock(0);
         hotelWorldClockSystem.attach(londonClock);
-        PhoneClock phoneClock = new PhoneClock(8);
         //Act
         phoneClock.setHotelWorldClockSystem(hotelWorldClockSystem);
         phoneClock.setTime(9);
@@ -48,7 +49,6 @@ public class HotelWorldClocksTest {
         //Arrange
         CityClock newYorkClock = new CityClock(-5);
         hotelWorldClockSystem.attach(newYorkClock);
-        PhoneClock phoneClock = new PhoneClock(8);
 
         //Act
         phoneClock.setHotelWorldClockSystem(hotelWorldClockSystem);
@@ -65,7 +65,6 @@ public class HotelWorldClocksTest {
         CityClock newYorkClock = new CityClock(-5);
         hotelWorldClockSystem.attach(londonClock);
         hotelWorldClockSystem.attach(newYorkClock);
-        PhoneClock phoneClock = new PhoneClock(8);
 
         //Act
         phoneClock.setHotelWorldClockSystem(hotelWorldClockSystem);
@@ -93,7 +92,6 @@ public class HotelWorldClocksTest {
         //Arrange
         CityClock moscowYorkClock = new CityClock(4);
         hotelWorldClockSystem.attach(moscowYorkClock);
-        PhoneClock phoneClock = new PhoneClock(8);
 
         //Act
         phoneClock.setHotelWorldClockSystem(hotelWorldClockSystem);
