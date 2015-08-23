@@ -11,6 +11,8 @@ import java.util.ArrayList;
 
 public class HotelWorldClockSystem {
 
+    private ArrayList<CityClock> cityClocks = new ArrayList<>();
+
     public void attach(CityClock cityClock) {
 
     }
