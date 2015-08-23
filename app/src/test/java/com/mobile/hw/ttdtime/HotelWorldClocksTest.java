@@ -26,9 +26,11 @@ public class HotelWorldClocksTest {
     public void theTimeOfClockLondonShouldBe1AfterThePhoneClockIsSetTo9BeijingTime() {
         //Arrange
         CityClock londonClock = new CityClock(0);
+        HotelWorldClockSystem hotelWorldClockSystem = new HotelWorldClockSystem();
+        hotelWorldClockSystem.attach(londonClock);
         PhoneClock phoneClock = new PhoneClock(8);
         //Act
-        phoneClock.setCityClock(londonClock);
+        phoneClock.setHotelWorldClockSystem(hotelWorldClockSystem);
         phoneClock.setTime(9);
         //Assert
         Assert.assertEquals(1, londonClock.getTime());
@@ -38,10 +40,12 @@ public class HotelWorldClocksTest {
     public void theTimeOfClockNewYorkShouldBe20AfterThePhoneClockIsSetTo9BeijingTime() {
         //Arrange
         CityClock newYorkClock = new CityClock(-5);
+        HotelWorldClockSystem hotelWorldClockSystem = new HotelWorldClockSystem();
+        hotelWorldClockSystem.attach(newYorkClock);
         PhoneClock phoneClock = new PhoneClock(8);
 
         //Act
-        phoneClock.setCityClock(newYorkClock);
+        phoneClock.setHotelWorldClockSystem(hotelWorldClockSystem);
         phoneClock.setTime(9);
 
         //Assert
