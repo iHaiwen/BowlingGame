@@ -26,7 +26,7 @@ public class HotelWorldClocksTest {
     private HotelWorldClockSystem hotelWorldClockSystem;
 
     @Before
-    public void intialize() throws Exception {
+    public void initialize() throws Exception {
         this.hotelWorldClockSystem = new HotelWorldClockSystem();
     }
 
