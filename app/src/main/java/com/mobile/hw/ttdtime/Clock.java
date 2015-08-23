@@ -7,6 +7,8 @@ package com.mobile.hw.ttdtime;
  * 描述一个时钟
  */
 
-public class Clock {
+public abstract class Clock {
     protected int utcOffset;
+
+    public abstract int getTime();
 }
