@@ -11,15 +11,10 @@ package com.mobile.hw.ttdtime;
 
 public class PhoneClock extends Clock {
 
-    private CityClock cityClock;
     private HotelWorldClockSystem hotelWorldClockSystem;
 
     public PhoneClock(int utcOffset) {
         super.utcOffset = utcOffset;
-    }
-
-    public void setCityClock(CityClock cityClock) {
-        this.cityClock = cityClock;
     }
 
     public void setTime(int time) {
