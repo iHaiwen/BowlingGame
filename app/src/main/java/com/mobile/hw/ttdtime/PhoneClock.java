@@ -33,7 +33,7 @@ public class PhoneClock extends Clock {
         this.hotelWorldClockSystem = hotelWorldClockSystem;
     }
 
-    //TODO method getTime on CityClock too
+    //TODO-working-on method getTime on CityClock too
     public int getTime() {
         return this.time;
     }
