@@ -34,6 +34,7 @@ public class PhoneClock extends Clock {
     }
 
     //TODO-working-on method getTime on CityClock too
+    @Override
     public int getTime() {
         return this.time;
     }
