@@ -52,7 +52,6 @@ public class HotelWorldClocksTest {
         Assert.assertEquals(20, newYorkClock.getTime());
     }
 
-    //TODO-working-on 测试多个时区
     @Test
     public void theTimeOfClockLondonAndNewYorkShouldBe1And20RespectivelyAfterThePhoneClockIsSetTo9BeijingTime() {
         //
