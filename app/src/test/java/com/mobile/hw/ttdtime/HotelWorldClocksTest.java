@@ -4,6 +4,7 @@ import com.mobile.hw.bowlinggame.BuildConfig;
 
 import junit.framework.Assert;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricGradleTestRunner;
@@ -22,11 +23,17 @@ import org.robolectric.annotation.Config;
 @Config(constants = BuildConfig.class, emulateSdk = 21)
 public class HotelWorldClocksTest {
 
+    private HotelWorldClockSystem hotelWorldClockSystem;
+
+    @Before
+    public void intialize() throws Exception {
+        this.hotelWorldClockSystem = new HotelWorldClockSystem();
+    }
+
     @Test
     public void theTimeOfClockLondonShouldBe1AfterThePhoneClockIsSetTo9BeijingTime() {
         //Arrange
         CityClock londonClock = new CityClock(0);
-        HotelWorldClockSystem hotelWorldClockSystem = new HotelWorldClockSystem();
         hotelWorldClockSystem.attach(londonClock);
         PhoneClock phoneClock = new PhoneClock(8);
         //Act
@@ -40,7 +47,6 @@ public class HotelWorldClocksTest {
     public void theTimeOfClockNewYorkShouldBe20AfterThePhoneClockIsSetTo9BeijingTime() {
         //Arrange
         CityClock newYorkClock = new CityClock(-5);
-        HotelWorldClockSystem hotelWorldClockSystem = new HotelWorldClockSystem();
         hotelWorldClockSystem.attach(newYorkClock);
         PhoneClock phoneClock = new PhoneClock(8);
 
@@ -57,7 +63,6 @@ public class HotelWorldClocksTest {
         //
         CityClock londonClock = new CityClock(0);
         CityClock newYorkClock = new CityClock(-5);
-        HotelWorldClockSystem hotelWorldClockSystem = new HotelWorldClockSystem();
         hotelWorldClockSystem.attach(londonClock);
         hotelWorldClockSystem.attach(newYorkClock);
         PhoneClock phoneClock = new PhoneClock(8);
@@ -87,7 +92,6 @@ public class HotelWorldClocksTest {
     public void theTimeOfClockMoscowShouldBe5AfterThePhoneClockIsSetTo9BeijingTime() {
         //Arrange
         CityClock moscowYorkClock = new CityClock(4);
-        HotelWorldClockSystem hotelWorldClockSystem = new HotelWorldClockSystem();
         hotelWorldClockSystem.attach(moscowYorkClock);
         PhoneClock phoneClock = new PhoneClock(8);
 
