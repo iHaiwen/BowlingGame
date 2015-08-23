@@ -1,5 +1,7 @@
 package com.mobile.hw.ttdtime;
 
+import java.util.ArrayList;
+
 /**
  * Author: haiwen.li
  * Time: 8/21/15 3:36 PM
@@ -11,5 +13,9 @@ public class HotelWorldClockSystem {
 
     public void attach(CityClock cityClock) {
 
+    }
+
+    public ArrayList<CityClock> getClocks() {
+        return this.cityClocks;
     }
 }
