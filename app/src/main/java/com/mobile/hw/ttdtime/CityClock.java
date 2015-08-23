@@ -13,7 +13,7 @@ public class CityClock {
     private int utcOffset;
     private int utcZeroTime;
 
-    //TODO 构造函数和PhoneClock一样，重复了
+    //TODO-working-on 构造函数和PhoneClock一样，重复了
     public CityClock(int utcOffset) {
         this.utcOffset = utcOffset;
     }
