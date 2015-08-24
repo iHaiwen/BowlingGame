@@ -144,7 +144,7 @@ public class Game {
 
 
         } else {
-
+            //TODO: Duplicate code in method Game.wasCorrectlyAnswered().
             System.out.println("Answer was corrent!!!!");
             purses[currentPlayer]++;
             System.out.println(players.get(currentPlayer)
