@@ -33,4 +33,20 @@ public class QuestionMaker {
     public void addRockQuestion(String rockQuestion) {
         rockQuestions.add(rockQuestion);
     }
+
+    public String removeFirstPopQuestion() {
+        return popQuestions.removeFirst().toString();
+    }
+
+    public String removeFirstScienceQuestion() {
+        return scienceQuestions.removeFirst().toString();
+    }
+
+    public String removeFirstSportsQuestions() {
+        return sportsQuestions.removeFirst().toString();
+    }
+
+    public String removeFirstRockQuestions() {
+        return rockQuestions.removeFirst().toString();
+    }
 }
