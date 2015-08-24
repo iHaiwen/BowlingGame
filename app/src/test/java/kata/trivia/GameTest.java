@@ -61,5 +61,22 @@ public class GameTest {
     }
 
     //TODO-user-intent: the game should be over if a player rolls the dice for 8 times and answers the question wrongly for 1 times followed by an even rolling number but then correctly for 7 times
-
+    @Test
+    public void theGameShouldBeOverIfAPlayerRollsTheDiceFor8TimesAndAnswersTheQuestionWronglyFor1TimesFollowedByAnEvenRollingNumberButTheCorrectlyFor7TimesWithOddRollingNumbers() {
+        //Arrange
+        Game game = new Game();
+        game.add("Chet");
+        boolean isGameStillInProgress = true;
+        //Act
+        game.roll(1);
+        game.wrongAnswer();
+        game.roll(2);
+        game.wasCorrectlyAnswered();
+        for (int i = 0; i < 6; i++) {
+            game.roll(1);
+            isGameStillInProgress = game.wasCorrectlyAnswered();
+        }
+        //Assert
+        Assert.assertFalse(isGameStillInProgress);
+    }
 }
