@@ -40,11 +40,11 @@ public class QuestionMaker {
         return scienceQuestions.removeFirst();
     }
 
-    public String removeFirstSportsQuestions() {
+    public String removeFirstSportsQuestion() {
         return sportsQuestions.removeFirst();
     }
 
-    public String removeFirstRockQuestions() {
+    public String removeFirstRockQuestion() {
         return rockQuestions.removeFirst();
     }
 }

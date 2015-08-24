@@ -88,7 +88,36 @@ public class GameTest {
         Assert.assertEquals("Pop Question 1", questionMaker.removeFirstPopQuestion());
     }
 
-    //TODO: add two science questions and could remove the first one
-    //TODO: add two sports questions and could remove the first one
-    //TODO: add two rock questions and could remove the first one
+    @Test
+    public void addTwoScienceQuestionsAndCouldRemoveTheFirstOne() {
+        //Arrange
+        QuestionMaker questionMaker = new QuestionMaker();
+        //Act
+        questionMaker.addScienceQuestion("Science Question 1");
+        questionMaker.addScienceQuestion("Science Question 2");
+        //Assert
+        Assert.assertEquals("Science Question 1", questionMaker.removeFirstScienceQuestion());
+    }
+
+    @Test
+    public void addTwoSportsQuestionsAndCouldRemoveTheFirstOne() {
+        //Arrange
+        QuestionMaker questionMaker = new QuestionMaker();
+        //Act
+        questionMaker.addSportsQuestion("Sports Question 1");
+        questionMaker.addSportsQuestion("Sports Question 2");
+        //Assert
+        Assert.assertEquals("Sports Question 1", questionMaker.removeFirstSportsQuestion());
+    }
+
+    @Test
+    public void addTwoRockQuestionsAndCouldRemoveTheFirstOne() {
+        //Arrange
+        QuestionMaker questionMaker = new QuestionMaker();
+        //Act
+        questionMaker.addRockQuestion("Rock Question 1");
+        questionMaker.addRockQuestion("Rock Question 2");
+        //Assert
+        Assert.assertEquals("Rock Question 1", questionMaker.removeFirstRockQuestion());
+    }
 }
