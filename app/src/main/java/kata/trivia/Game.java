@@ -39,6 +39,7 @@ public class Game {
         return (howManyPlayers() >= 2);
     }
 
+    //TODO: The return value of method Game.add() is not used.
     public boolean add(String playerName) {
 
 
@@ -47,6 +48,7 @@ public class Game {
         purses[howManyPlayers()] = 0;
         inPenaltyBox[howManyPlayers()] = false;
 
+        //TODO: Replace System.out.println() with a method of logger
         System.out.println(playerName + " was added");
         System.out.println("They are player number " + players.size());
         return true;
