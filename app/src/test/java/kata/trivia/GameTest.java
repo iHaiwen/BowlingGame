@@ -77,7 +77,17 @@ public class GameTest {
         Assert.assertFalse(isGameStillInProgress);
     }
 
-    //TODO: add two pop questions and could remove the first one
+    @Test
+    public void addTwoPopQuestionAndCouldRemoveTheFirstOne() {
+        //Arrange
+        QuestionMaker questionMaker = new QuestionMaker();
+        //Act
+        questionMaker.addPopQuestion("Pop Question 1");
+        questionMaker.addPopQuestion("Pop Question 2");
+        //Assert
+        Assert.assertEquals("Pop Question 1", questionMaker.removeFirstPopQuestion());
+    }
+
     //TODO: add two science questions and could remove the first one
     //TODO: add two sports questions and could remove the first one
     //TODO: add two rock questions and could remove the first one
