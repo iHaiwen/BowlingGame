@@ -17,6 +17,8 @@ public class Game {
     int currentPlayer = 0;
     boolean isGettingOutOfPenaltyBox;
 
+    //TODO-working-on:通过public的方法来了解该类会如何被使用
+
     public Game() {
         for (int i = 0; i < 50; i++) {
             popQuestions.addLast("Pop Question " + i);
