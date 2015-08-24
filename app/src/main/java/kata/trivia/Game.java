@@ -42,8 +42,7 @@ public class Game {
         }
     }
 
-    //TODO-later: The return value of method Game.add() is not used.
-    public boolean add(String playerName) {
+    public void add(String playerName) {
 
 
         players.add(playerName);
@@ -53,7 +52,6 @@ public class Game {
 
         logger.info(playerName + " was added");
         logger.info("They are player number " + players.size());
-        return true;
     }
 
     private int howManyPlayers() {
