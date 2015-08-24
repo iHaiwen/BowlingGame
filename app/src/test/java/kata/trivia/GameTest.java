@@ -23,7 +23,6 @@ public class GameTest {
         assertEquals(5, 2 + 3);
     }
 
-    //TODO-user-intent: the game should be over if  a player rolls the dice and answers each question correctly for 6 times
     @Test
     public void theGameShouldBeOverIfAPlayerRollsTheDiceAndAnswersEachQuestionCorrectlyFor6Times() {
         //Arrange
@@ -40,7 +39,6 @@ public class GameTest {
         Assert.assertFalse(isGameStillInProgress);
     }
 
-    //TODO-user-intent: the game should be over if a player rolls the dice for 7 times and answers the question wrongly for 1 times followed by an odd rolling number but then correctly for 6 times
     @Test
     public void theGameShouldBeOverIfAPlayerRollsTheDiceFor7TimesAndAnswersTheQuestionWronglyFor1TimesFollowedByAnOddRollingNumberButThenCorrectlyFor6Times() {
         //Arrange
@@ -60,7 +58,6 @@ public class GameTest {
         Assert.assertFalse(isGameStillInProgress);
     }
 
-    //TODO-user-intent: the game should be over if a player rolls the dice for 8 times and answers the question wrongly for 1 times followed by an even rolling number but then correctly for 7 times
     @Test
     public void theGameShouldBeOverIfAPlayerRollsTheDiceFor8TimesAndAnswersTheQuestionWronglyFor1TimesFollowedByAnEvenRollingNumberButTheCorrectlyFor7TimesWithOddRollingNumbers() {
         //Arrange
