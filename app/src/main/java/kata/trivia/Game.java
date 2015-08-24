@@ -24,6 +24,7 @@ public class Game {
             popQuestions.addLast("Pop Question " + i);
             scienceQuestions.addLast(("Science Question " + i));
             sportsQuestions.addLast(("Sports Question " + i));
+            //TODO: inline method Game.createRockQuestion()
             rockQuestions.addLast(createRockQuestion(i));
         }
     }
