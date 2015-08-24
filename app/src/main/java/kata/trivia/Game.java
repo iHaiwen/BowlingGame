@@ -11,6 +11,7 @@ public class Game {
 
     private final QuestionMaker questionMaker = new QuestionMaker();
 
+    //TODO: Make player list type-safe
     //TODO: Move playerName, places, purses and inPenaltyBox to a new class Player
     private ArrayList players = new ArrayList();
     private int[] places = new int[6];
