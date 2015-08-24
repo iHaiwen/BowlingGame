@@ -11,11 +11,10 @@ import java.util.LinkedList;
 
 public class QuestionMaker {
 
-    //TODO-working-on: Make question lists type-safe
-    private LinkedList popQuestions = new LinkedList();
-    private LinkedList scienceQuestions = new LinkedList();
-    private LinkedList sportsQuestions = new LinkedList();
-    private LinkedList rockQuestions = new LinkedList();
+    private LinkedList<String> popQuestions = new LinkedList();
+    private LinkedList<String> scienceQuestions = new LinkedList();
+    private LinkedList<String> sportsQuestions = new LinkedList();
+    private LinkedList<String> rockQuestions = new LinkedList();
 
     public void addPopQuestion(String popQuestion) {
         popQuestions.add(popQuestion);
@@ -34,18 +33,18 @@ public class QuestionMaker {
     }
 
     public String removeFirstPopQuestion() {
-        return popQuestions.removeFirst().toString();
+        return popQuestions.removeFirst();
     }
 
     public String removeFirstScienceQuestion() {
-        return scienceQuestions.removeFirst().toString();
+        return scienceQuestions.removeFirst();
     }
 
     public String removeFirstSportsQuestions() {
-        return sportsQuestions.removeFirst().toString();
+        return sportsQuestions.removeFirst();
     }
 
     public String removeFirstRockQuestions() {
-        return rockQuestions.removeFirst().toString();
+        return rockQuestions.removeFirst();
     }
 }
