@@ -3,6 +3,8 @@ package kata.trivia;
 
 import com.mobile.hw.bowlinggame.BuildConfig;
 
+import junit.framework.Assert;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricGradleTestRunner;
@@ -22,6 +24,23 @@ public class GameTest {
     }
 
     //TODO-user-intent: the game should be over if  a player rolls the dice and answers each question correctly for 6 times
+    @Test
+    public void theGameShouldBeOverIfAPlayerRollsTheDiceAndAnswersEachQuestionCorrectlyFor6Times() {
+        //Arrange
+        boolean isGameStillInProgress = true;
+        Game game = new Game();
+        game.add("Pet");
+        //Act
+        for (int i = 0; i < 6; i++) {
+            game.roll(1);
+            isGameStillInProgress = game.wasCorrectlyAnswered();
+        }
+
+        //Assert
+        Assert.assertFalse(isGameStillInProgress);
+    }
+
+
     //TODO-user-intent: the game should be over if a player rolls the dice for 7 times and answers the question wrongly for 1 times followed by an odd rolling number but then correctly for 6 times
     //TODO-user-intent: the game should be over if a player rolls the dice for 8 times and answers the question wrongly for 1 times followed by an even rolling number but then correctly for 7 times
 
