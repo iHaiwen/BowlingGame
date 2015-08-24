@@ -161,6 +161,7 @@ public class Game {
         }
     }
 
+    //TODO: The value of the method Game.wrongAnswer() is unnecessary and should be eliminated.
     public boolean wrongAnswer() {
         System.out.println("Question was incorrectly answered");
         System.out.println(players.get(currentPlayer) + " was sent to the penalty box");
