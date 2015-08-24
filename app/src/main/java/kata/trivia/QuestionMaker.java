@@ -11,8 +11,7 @@ import java.util.LinkedList;
 
 public class QuestionMaker {
 
-    //TODO: Make question lists type-safe
-    //TODO-working-on: Move question lists to a new  class QuestionMaker
+    //TODO-working-on: Make question lists type-safe
     private LinkedList popQuestions = new LinkedList();
     private LinkedList scienceQuestions = new LinkedList();
     private LinkedList sportsQuestions = new LinkedList();
