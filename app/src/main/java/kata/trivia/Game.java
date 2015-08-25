@@ -99,7 +99,7 @@ public class Game {
             logger.info(questionMaker.removeFirstRockQuestion());
     }
 
-    //TODO: Move method currentCategory() to QuestionMaker
+    //TODO: Move method currentCategory() to Player
     private String currentCategory() {
         if (players.get(currentPlayer).getPlace() == 0) return "Pop";
         if (players.get(currentPlayer).getPlace() == 4) return "Pop";
