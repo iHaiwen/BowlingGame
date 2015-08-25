@@ -10,6 +10,7 @@ package kata.trivia;
 public class Player {
     private String playerName;
     private int place;
+    private int sumOfGoldCoins = 0;
 
     public Player(String playerName) {
         this.playerName = playerName;
@@ -45,6 +46,10 @@ public class Player {
     }
 
     public void winAGoldCoin() {
+        this.sumOfGoldCoins++;
+    }
 
+    public int countGoldCoins() {
+        return this.sumOfGoldCoins;
     }
 }
