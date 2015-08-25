@@ -26,6 +26,7 @@ public class Player {
 
     public void moveForwardSteps(int steps) {
         this.place += steps;
+        //TODO: Magic number 12
         if (this.place > 11) {
             this.place -= 12;
         }
@@ -36,6 +37,7 @@ public class Player {
     }
 
     public String getCurrentCategory() {
+        //TODO: Magic number 0, 4, 8, 1, 5, 9, 2, 6, 10
         if (this.place == 0) return "Pop";
         if (this.place == 4) return "Pop";
         if (this.place == 8) return "Pop";
