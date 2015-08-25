@@ -146,7 +146,7 @@ public class GameTest {
     }
 
     @Test
-    public void theCategoryShouldBePopIfThePlayerMoves12Or4Or8Steps() {
+    public void theCategoryShouldBePopIfThePlayerInPlace0Or4Or8() {
         //Arrange
         Player player = new Player("Ben");
         String category = "Pop";
@@ -158,13 +158,12 @@ public class GameTest {
         player.moveForwardSteps(4);
         Assert.assertEquals(category, player.getCurrentCategory());
 
-        player.moveForwardSteps(8);
+        player.moveForwardSteps(4);
         Assert.assertEquals(category, player.getCurrentCategory());
     }
 
-    //TODO-working-on: The category should be Science if the player moves 1, 5 or 9 steps
     @Test
-    public void theCatgoryShouldBeScienceIfThePlayerMoves1Or5Or9Steps() {
+    public void theCatgoryShouldBeScienceIfThePlayerInPlace1Or5Or9() {
         //Arrange
         Player player = new Player("Ben");
         String category = "Science";
@@ -173,13 +172,13 @@ public class GameTest {
         player.moveForwardSteps(1);
         Assert.assertEquals(category, player.getCurrentCategory());
 
-        player.moveForwardSteps(5);
+        player.moveForwardSteps(4);
         Assert.assertEquals(category, player.getCurrentCategory());
 
-        player.moveForwardSteps(9);
+        player.moveForwardSteps(4);
         Assert.assertEquals(category, player.getCurrentCategory());
     }
 
-    //TODO: The category should be Sports if the player moves 2, 6 or 10 steps
-    //TODO: The category should be Rock if the player moves 3, 7 or 11 steps
+    //TODO: The category should be Sports if the player in place 2, 6 or 10
+    //TODO: The category should be Rock if the player in place 3, 7 or 11
 }
