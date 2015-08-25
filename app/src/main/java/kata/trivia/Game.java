@@ -11,7 +11,6 @@ public class Game {
     private final QuestionMaker questionMaker = new QuestionMaker();
 
     private ArrayList<Player> players = new ArrayList();
-    //TODO-working-on: Move inPenaltyBox into class Player
 
     private int currentPlayer = 0;
 
@@ -50,16 +49,14 @@ public class Game {
         logger.info(players.get(currentPlayer) + " is the current player");
         logger.info("They have rolled a " + rollingNumber);
 
-        if (inPenaltyBox[currentPlayer] || players.get(currentPlayer).isInPenaltyBox()) {
+        if (players.get(currentPlayer).isInPenaltyBox()) {
             if (rollingNumber % 2 != 0) {
-                isGettingOutOfPenaltyBox = true;
                 players.get(currentPlayer).getOutOfPenaltyBox();
 
                 logger.info(players.get(currentPlayer) + " is getting out of the penalty box");
                 currentPlayerMovesToNewPlaceAndAnswersAQuestion(rollingNumber);
             } else {
                 logger.info(players.get(currentPlayer) + " is not getting out of the penalty box");
-                isGettingOutOfPenaltyBox = false;
                 players.get(currentPlayer).stayInPenaltyBox();
             }
 
@@ -91,8 +88,8 @@ public class Game {
     }
 
     public boolean wasCorrectlyAnswered() {
-        if (inPenaltyBox[currentPlayer] || players.get(currentPlayer).isInPenaltyBox()) {
-            if (isGettingOutOfPenaltyBox || players.get(currentPlayer).isGettingOutOfPenaltyBox()) {
+        if (players.get(currentPlayer).isInPenaltyBox()) {
+            if (players.get(currentPlayer).isGettingOutOfPenaltyBox()) {
                 return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
             } else {
                 nextPlayer();
@@ -127,7 +124,6 @@ public class Game {
     public boolean wrongAnswer() {
         logger.info("Question was incorrectly answered");
         logger.info(players.get(currentPlayer) + " was sent to the penalty box");
-        inPenaltyBox[currentPlayer] = true;
         players.get(currentPlayer).sentToPenaltyBox();
 
         nextPlayer();
