@@ -179,6 +179,36 @@ public class GameTest {
         Assert.assertEquals(category, player.getCurrentCategory());
     }
 
-    //TODO: The category should be Sports if the player in place 2, 6 or 10
-    //TODO: The category should be Rock if the player in place 3, 7 or 11
+    @Test
+    public void theCategoryShouldBeSportsIfThePlayerInPlace2Or6Or10() {
+        //Arrange
+        Player player = new Player("Ben");
+        String category = "Sports";
+
+        //Act, Assert
+        player.moveForwardSteps(2);
+        Assert.assertEquals(category, player.getCurrentCategory());
+
+        player.moveForwardSteps(4);
+        Assert.assertEquals(category, player.getCurrentCategory());
+
+        player.moveForwardSteps(4);
+        Assert.assertEquals(category, player.getCurrentCategory());
+    }
+
+    public void theCategoryShouldBeRockIfThePlayerInPlace3Or7Or11() {
+        //Arrange
+        Player player = new Player("Ben");
+        String category = "Rock";
+
+        //Act, Assert
+        player.moveForwardSteps(3);
+        Assert.assertEquals(category, player.getCurrentCategory());
+
+        player.moveForwardSteps(4);
+        Assert.assertEquals(category, player.getCurrentCategory());
+
+        player.moveForwardSteps(4);
+        Assert.assertEquals(category, player.getCurrentCategory());
+    }
 }
