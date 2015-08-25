@@ -11,7 +11,6 @@ public class Game {
     private final QuestionMaker questionMaker = new QuestionMaker();
 
     private ArrayList<Player> players = new ArrayList();
-    //TODO-working-on: Move purses into class Player
     //TODO: Move inPenaltyBox into class Player
     private boolean[] inPenaltyBox = new boolean[6];
 
@@ -108,12 +107,7 @@ public class Game {
 
     private boolean currentPlayerGetsAGoldCoinAndSelectNextPlayer() {
         logger.info("Answer was correct!!!!");
-        purses[currentPlayer]++;
         players.get(currentPlayer).winAGoldCoin();
-        logger.info(players.get(currentPlayer)
-                + " now has "
-                + purses[currentPlayer]
-                + " Gold Coins.");
         logger.info(players.get(currentPlayer)
                 + " now has "
                 + players.get(currentPlayer).countGoldCoins()
