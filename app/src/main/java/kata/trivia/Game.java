@@ -98,8 +98,8 @@ public class Game {
     public boolean wasCorrectlyAnswered() {
         if (players.get(currentPlayer).isInPenaltyBox()) {
             nextPlayer();
-            boolean isGameStillInProgress = true;
-            return isGameStillInProgress;
+            boolean theGameIsStillInProgress = true;
+            return theGameIsStillInProgress;
         }
 
         return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
@@ -132,7 +132,8 @@ public class Game {
         nextPlayer();
 
         //TODO-later: The value of the method Game.wrongAnswer() is unnecessary and should be eliminated.
-        return true;
+        boolean theGameIsStillInProgress = true;
+        return theGameIsStillInProgress;
     }
 
     private boolean isGameStillInProgress() {
