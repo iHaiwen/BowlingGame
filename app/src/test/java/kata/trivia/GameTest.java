@@ -121,9 +121,14 @@ public class GameTest {
         Assert.assertEquals("Rock Question 1", questionMaker.removeFirstRockQuestion());
     }
 
-    //TODO-working-on: The place should be 1 if player moves forward 1 step
     @Test
     public void thePlaceShouldBe1IfThePlayerMovesForward1Step() {
+        //Arrange
+        Player player = new Player("Ben");
+
+        //Act
+        player.moveForwardSteps(1);
+
         //Assert
         Assert.assertEquals(1, player.getPlace());
     }
