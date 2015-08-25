@@ -130,6 +130,7 @@ public class Game {
         logger.info("Question was incorrectly answered");
         logger.info(players.get(currentPlayer) + " was sent to the penalty box");
         inPenaltyBox[currentPlayer] = true;
+        players.get(currentPlayer).sentToPenaltyBox();
 
         nextPlayer();
 
