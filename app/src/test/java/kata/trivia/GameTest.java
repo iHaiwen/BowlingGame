@@ -122,7 +122,11 @@ public class GameTest {
     }
 
     //TODO-working-on: The place should be 1 if player moves forward 1 step
-
+    @Test
+    public void thePlaceShouldBe1IfThePlayerMovesForward1Step() {
+        //Assert
+        Assert.assertEquals(1, player.getPlace());
+    }
 
     //TODO: The place should be 0 if player moves forward 12 steps
     //TODO: The category should be Pop if the player moves 12, 4 or 8 steps
