@@ -32,7 +32,7 @@ public class Player {
     }
 
     //TODO-working-on: Move method currentCategory() to Player
-    public String currentCategory() {
+    private String currentCategory() {
         if (this.place == 0) return "Pop";
         if (this.place == 4) return "Pop";
         if (this.place == 8) return "Pop";
