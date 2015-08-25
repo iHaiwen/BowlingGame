@@ -11,7 +11,7 @@ public class Game {
     private final QuestionMaker questionMaker = new QuestionMaker();
 
     private ArrayList<Player> players = new ArrayList();
-    //TODO: Move purses into class Player
+    //TODO-working-on: Move purses into class Player
     private int[] purses = new int[6];
     //TODO: Move inPenaltyBox into class Player
     private boolean[] inPenaltyBox = new boolean[6];
