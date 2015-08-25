@@ -62,4 +62,8 @@ public class Player {
     public void getOutOfPenaltyBox() {
         this.isGettingOutOfPenaltyBox = true;
     }
+
+    public void stayInPenaltyBox() {
+        this.isGettingOutOfPenaltyBox = false;
+    }
 }
