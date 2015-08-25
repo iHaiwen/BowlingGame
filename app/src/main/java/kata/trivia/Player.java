@@ -20,6 +20,9 @@ public class Player {
     }
 
     public void moveForwardSteps(int steps) {
-
+        this.place += steps;
+        if (this.place > 11) {
+            this.place -= 12;
+        }
     }
 }
