@@ -26,4 +26,8 @@ public class Player {
             this.place -= 12;
         }
     }
+
+    public int getPlace() {
+        return this.place;
+    }
 }
