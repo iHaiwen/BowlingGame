@@ -24,8 +24,6 @@ public class Player {
     private int place;
     private int sumOfGoldCoins = 0;
     private boolean isInInPenaltyBox = false;
-    //TODO-working-on: Eliminate field Player.isGettingOutOfPenaltyBox
-    private boolean isGettingOutOfPenaltyBox = false;
 
     public Player(String playerName) {
         this.playerName = playerName;
@@ -74,14 +72,6 @@ public class Player {
 
     public void getOutOfPenaltyBox() {
         this.isInInPenaltyBox = false;
-    }
-
-    public void stayInPenaltyBox() {
-        this.isGettingOutOfPenaltyBox = false;
-    }
-
-    public boolean isGettingOutOfPenaltyBox() {
-        return this.isGettingOutOfPenaltyBox;
     }
 
     public void sentToPenaltyBox() {
