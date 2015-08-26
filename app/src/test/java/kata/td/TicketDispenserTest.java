@@ -1,5 +1,7 @@
 package kata.td;
 
+import junit.framework.Assert;
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -13,7 +15,13 @@ public class TicketDispenserTest {
         assertEquals(5, 2 + 3);
     }
 
-    //TODO-user-intent-test: a new ticket should have the turn number subsequent to the previous ticket
+    //TODO-user-intent-test-working-on: a new ticket should have the turn number subsequent to the previous ticket
+    @Test
+    public void aNewTicketShouldHaveTheTurnNumberSubsequentToThePreviousTicket() throws Exception {
+        //Assert
+        Assert.assertTrue(newTicket.getTurnNumber() > previousTicket.getTurnNumber());
+    }
+
     //TODO-user-intent-test: a new ticket should have the turn number subsequent to the previous ticket from another dispenser
     //TODO-unit-test: the ticket dispenser should dispense the ticket number 11 if give a turn number 11 to it
     //TODO-new-feature: the turn number sequence of the vip customers starts from 1001
