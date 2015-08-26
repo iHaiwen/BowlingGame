@@ -4,26 +4,17 @@ package kata.tpms;
  * Created by benwu on 14-6-10.
  */
 public class Alarm {
-    public static final double LOW_PRESSURE_THRESHOLD = 17;
-    public static final double HIGH_PRESSURE_THRESHOLD = 21;
+    private final double LowPressureThreshold = 17;
+    private final double HighPressureThreshold = 21;
 
-    private Transducer transducer = null;
+    private Sensor sensor = new Sensor();
 
     private boolean alarmOn = false;
 
-    public Alarm() {
-        this.transducer = new Sensor();
-    }
-
-    public Alarm(Transducer transducer) {
-        this.transducer = transducer;
-    }
-
     public void check() {
-        alarmOn = false;
-        double psiPressureValue = transducer.popNextPressurePsiValue();
+        double psiPressureValue = sensor.popNextPressurePsiValue();
 
-        if (psiPressureValue < LOW_PRESSURE_THRESHOLD || HIGH_PRESSURE_THRESHOLD < psiPressureValue) {
+        if (psiPressureValue < LowPressureThreshold || HighPressureThreshold < psiPressureValue) {
             alarmOn = true;
         }
     }
