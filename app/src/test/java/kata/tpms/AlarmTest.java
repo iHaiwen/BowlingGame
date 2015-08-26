@@ -36,7 +36,21 @@ public class AlarmTest {
         Assert.assertFalse(alarm.isAlarmOn());
     }
 
-    //TODO-user-intent-test: a pressure value outside the range should raise the alarm
+    //TODO-user-intent-test-working-on: a pressure value outside the range should raise the alarm
+    @Test
+    public void aPressureValueOutsideTheRangeShouldRaiseTheAlarm() throws Exception {
+        //Arrange
+        StubSensor stubSensor = new StubSensor();
+        stubSensor.arrangeNextPressurePsiValue(Alarm.HIGH_PRESSURE_THRESHHOLD + 1);
+        Alarm alarm = new Alarm(stubSensor);
+
+        //Act
+        alarm.check();
+
+        //Assert
+        Assert.assertTrue(alarm.isAlarmOn());
+    }
+
     //TODO-user-intent-test: a normal pressure after a value outside the range should not stop the alarm
     //TODO-new-feature: a normal pressure value after a value outside the range should stop the alarm
 }
