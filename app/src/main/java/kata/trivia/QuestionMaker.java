@@ -11,10 +11,21 @@ import java.util.LinkedList;
 
 public class QuestionMaker {
 
+    public static final int MAX_NUMBER_OF_QUESTIONS = 50;
+
     private LinkedList<String> popQuestions = new LinkedList();
     private LinkedList<String> scienceQuestions = new LinkedList();
     private LinkedList<String> sportsQuestions = new LinkedList();
     private LinkedList<String> rockQuestions = new LinkedList();
+
+    public QuestionMaker() {
+        for (int i = 0; i < MAX_NUMBER_OF_QUESTIONS; i++) {
+            addPopQuestion("Pop Question " + i);
+            addScienceQuestion(("Science Question " + i));
+            addSportsQuestion(("Sports Question " + i));
+            addRockQuestion("Rock Question " + i);
+        }
+    }
 
     public void addPopQuestion(String popQuestion) {
         popQuestions.add(popQuestion);
