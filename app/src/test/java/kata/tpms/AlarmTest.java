@@ -51,7 +51,7 @@ public class AlarmTest {
     }
 
     @Test
-    public void aNormalPressureValueAfterAValueOutsideTheRangeShouldNotStopTheAlarm() throws Exception {
+    public void aNormalPressureValueAfterAValueOutsideTheRangeShouldStopTheAlarm() throws Exception {
         //Arrange
         StubSensor stubSensor = new StubSensor();
         Alarm alarm = new Alarm(stubSensor);
@@ -64,8 +64,6 @@ public class AlarmTest {
         alarm.check();
 
         //Assert
-        Assert.assertTrue(alarm.isAlarmOn());
+        Assert.assertFalse(alarm.isAlarmOn());
     }
-
-    //TODO-new-feature: a normal pressure value after a value outside the range should stop the alarm
 }
