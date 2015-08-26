@@ -22,11 +22,6 @@ public class Game {
 
     public Game() {
         logToAFile();
-        prepareQuestions();
-    }
-
-    private void prepareQuestions() {
-
     }
 
     private void logToAFile() {
