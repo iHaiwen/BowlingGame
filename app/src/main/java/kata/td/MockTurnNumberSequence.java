@@ -8,4 +8,7 @@ package kata.td;
  */
 
 public class MockTurnNumberSequence {
+    public void arrangeNextTurnNumber(int nextTurnNumber) {
+
+    }
 }
