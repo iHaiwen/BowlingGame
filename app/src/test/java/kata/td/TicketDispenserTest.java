@@ -28,7 +28,13 @@ public class TicketDispenserTest {
         Assert.assertEquals(1, (newTicket.getTurnNumber() - previousTicket.getTurnNumber()));
     }
 
-    //TODO-user-intent-test: a new ticket should have the turn number subsequent to the previous ticket from another dispenser
+    //TODO-user-intent-test-working-on: a new ticket should have the turn number subsequent to the previous ticket from another dispenser
+    @Test
+    public void aNewTicketShouldHaveTheTurnNumberSubsequentToThePreviousTicketFromAnotherDispenser() throws Exception {
+        //Assert
+        Assert.assertEquals(1, (newTicket.getTurnNumber() - previousTicket.getTurnNumber()));
+    }
+
     //TODO-unit-test: the ticket dispenser should dispense the ticket number 11 if give a turn number 11 to it
     //TODO-new-feature: the turn number sequence of the vip customers starts from 1001
     //TODO-new-feature: the turn number sequence of the regular customers starts from 2001
