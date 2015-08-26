@@ -8,4 +8,7 @@ package kata.tpms;
  */
 
 public class StubSensor {
+    public void arrangeNextPressurePsiValue(double nextPressureThreshold) {
+
+    }
 }
