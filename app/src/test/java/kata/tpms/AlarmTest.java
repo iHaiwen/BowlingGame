@@ -50,6 +50,12 @@ public class AlarmTest {
         Assert.assertTrue(alarm.isAlarmOn());
     }
 
-    //TODO-user-intent-test: a normal pressure after a value outside the range should not stop the alarm
+    //TODO-user-intent-test-working-on: a normal pressure after a value outside the range should not stop the alarm
+    @Test
+    public void aNormalPressureValueAfterAValueOutsideTheRangeShouldNotStopTheAlarm() throws Exception {
+        //Assert
+        Assert.assertTrue(alarm.isAlarmOn());
+    }
+
     //TODO-new-feature: a normal pressure value after a value outside the range should stop the alarm
 }
