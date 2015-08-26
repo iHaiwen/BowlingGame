@@ -8,8 +8,10 @@ package kata.td;
  */
 
 public class MockTurnNumberSequence extends TurnNumberSequence {
-    public void arrangeNextTurnNumber(int nextTurnNumber) {
+    private int nextTurnNumber;
 
+    public void arrangeNextTurnNumber(int nextTurnNumber) {
+        this.nextTurnNumber = nextTurnNumber;
     }
 
     public void verifyMethodGetNextTurnNumberCalledOne() {
