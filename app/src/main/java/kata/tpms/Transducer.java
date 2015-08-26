@@ -8,4 +8,5 @@ package kata.tpms;
  */
 
 public interface Transducer {
+    double popNextPressurePsiValue();
 }
