@@ -48,11 +48,11 @@ public class GameTest {
     }
 
     @Test
-    public void theGameShouldBeOverIfAPlayerRollsTheDiceFor7TimesAndAnswersTheQuestionWronglyFor1TimesFollowedByAnOddRollingNumberButThenCorrectlyFor6Times() {
+    public void theGameShouldBeOverIfAPlayerRollsTheDiceFor7TimesAndAnswersTheQuestionWronglyFor1TimesFollowedByRollingNumberWhichIsNot4ButThenCorrectlyFor6Times() {
         //Act
         game.roll(1);
         game.wrongAnswer();
-        game.roll(1);
+        game.roll(6);
         game.wasCorrectlyAnswered();
         for (int i = 0; i < 5; i++) {
             game.roll(1);
@@ -63,11 +63,11 @@ public class GameTest {
     }
 
     @Test
-    public void theGameShouldBeOverIfAPlayerRollsTheDiceFor8TimesAndAnswersTheQuestionWronglyFor1TimesFollowedByAnEvenRollingNumberButTheCorrectlyFor7TimesWithOddRollingNumbers() {
+    public void theGameShouldBeOverIfAPlayerRollsTheDiceFor8TimesAndAnswersTheQuestionWronglyFor1TimesFollowedByRollingNumberWhichIs4rButTheCorrectlyFor7TimesWithOddRollingNumbers() {
         //Act
         game.roll(1);
         game.wrongAnswer();
-        game.roll(2);
+        game.roll(4);
         game.wasCorrectlyAnswered();
         for (int i = 0; i < 6; i++) {
             game.roll(1);
