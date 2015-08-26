@@ -21,6 +21,10 @@ import org.robolectric.annotation.Config;
 @Config(constants = BuildConfig.class, emulateSdk = 21)
 public class QuestionMakerTest {
 
+    public static final String POP_QUESTION_1 = "Pop Question 1";
+    public static final String SCIENCE_QUESTION_1 = "Science Question 1";
+    public static final String SPORTS_QUESTION_1 = "Sports Question 1";
+    public static final String ROCK_QUESTION_1 = "Rock Question 1";
     private QuestionMaker questionMaker;
 
     @Before
@@ -32,28 +36,28 @@ public class QuestionMakerTest {
     @Test
     public void addTwoPopQuestionAndCouldRemoveTheFirstOne() {
         //Act
-        questionMaker.addPopQuestion("Pop Question 1");
+        questionMaker.addPopQuestion(POP_QUESTION_1);
         questionMaker.addPopQuestion("Pop Question 2");
         //Assert
-        Assert.assertEquals("Pop Question 1", questionMaker.removeFirstPopQuestion());
+        Assert.assertEquals(POP_QUESTION_1, questionMaker.removeFirstPopQuestion());
     }
 
     @Test
     public void addTwoScienceQuestionsAndCouldRemoveTheFirstOne() {
         //Act
-        questionMaker.addScienceQuestion("Science Question 1");
+        questionMaker.addScienceQuestion(SCIENCE_QUESTION_1);
         questionMaker.addScienceQuestion("Science Question 2");
         //Assert
-        Assert.assertEquals("Science Question 1", questionMaker.removeFirstScienceQuestion());
+        Assert.assertEquals(SCIENCE_QUESTION_1, questionMaker.removeFirstScienceQuestion());
     }
 
     @Test
     public void addTwoSportsQuestionsAndCouldRemoveTheFirstOne() {
         //Act
-        questionMaker.addSportsQuestion("Sports Question 1");
+        questionMaker.addSportsQuestion(SPORTS_QUESTION_1);
         questionMaker.addSportsQuestion("Sports Question 2");
         //Assert
-        Assert.assertEquals("Sports Question 1", questionMaker.removeFirstSportsQuestion());
+        Assert.assertEquals(SPORTS_QUESTION_1, questionMaker.removeFirstSportsQuestion());
     }
 
     @Test
@@ -61,9 +65,9 @@ public class QuestionMakerTest {
         //Arrange
         QuestionMaker questionMaker = new QuestionMaker();
         //Act
-        questionMaker.addRockQuestion("Rock Question 1");
+        questionMaker.addRockQuestion(ROCK_QUESTION_1);
         questionMaker.addRockQuestion("Rock Question 2");
         //Assert
-        Assert.assertEquals("Rock Question 1", questionMaker.removeFirstRockQuestion());
+        Assert.assertEquals(ROCK_QUESTION_1, questionMaker.removeFirstRockQuestion());
     }
 }
