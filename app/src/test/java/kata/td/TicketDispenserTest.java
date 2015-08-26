@@ -18,8 +18,9 @@ public class TicketDispenserTest {
     //TODO-user-intent-test-working-on: a new ticket should have the turn number subsequent to the previous ticket
     @Test
     public void aNewTicketShouldHaveTheTurnNumberSubsequentToThePreviousTicket() throws Exception {
+
         //Assert
-        Assert.assertTrue(newTicket.getTurnNumber() > previousTicket.getTurnNumber());
+        Assert.assertEquals(1, (newTicket.getTurnNumber() - previousTicket.getTurnNumber()));
     }
 
     //TODO-user-intent-test: a new ticket should have the turn number subsequent to the previous ticket from another dispenser
