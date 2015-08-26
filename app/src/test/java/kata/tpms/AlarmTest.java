@@ -22,6 +22,7 @@ public class AlarmTest {
         assertEquals(5, 2 + 3);
     }
 
+    //TODO-user-intent-test-working-on: a normal pressure value should not raise the alarm
     @Test
     public void aNormalPressureValueShouldNotRaiseTheAlarm() {
         //Arrange
