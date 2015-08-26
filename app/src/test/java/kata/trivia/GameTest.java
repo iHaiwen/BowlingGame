@@ -5,6 +5,7 @@ import com.mobile.hw.bowlinggame.BuildConfig;
 
 import junit.framework.Assert;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricGradleTestRunner;
@@ -15,6 +16,17 @@ import static org.junit.Assert.assertEquals;
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class, emulateSdk = 21)
 public class GameTest {
+    private Game game;
+    private boolean isGameStillInProgress = true;
+
+    @Before
+    public void initialize() throws Exception {
+        //Arrange
+        game = new Game();
+        game.add("Chet");
+        isGameStillInProgress = true;
+    }
+
     /**
      * Rigourous Test :-)
      */
@@ -25,10 +37,6 @@ public class GameTest {
 
     @Test
     public void theGameShouldBeOverIfAPlayerRollsTheDiceAndAnswersEachQuestionCorrectlyFor6Times() {
-        //Arrange
-        boolean isGameStillInProgress = true;
-        Game game = new Game();
-        game.add("Pet");
         //Act
         for (int i = 0; i < 6; i++) {
             game.roll(1);
@@ -41,10 +49,6 @@ public class GameTest {
 
     @Test
     public void theGameShouldBeOverIfAPlayerRollsTheDiceFor7TimesAndAnswersTheQuestionWronglyFor1TimesFollowedByAnOddRollingNumberButThenCorrectlyFor6Times() {
-        //Arrange
-        Game game = new Game();
-        game.add("Chet");
-        boolean isGameStillInProgress = true;
         //Act
         game.roll(1);
         game.wrongAnswer();
@@ -60,10 +64,6 @@ public class GameTest {
 
     @Test
     public void theGameShouldBeOverIfAPlayerRollsTheDiceFor8TimesAndAnswersTheQuestionWronglyFor1TimesFollowedByAnEvenRollingNumberButTheCorrectlyFor7TimesWithOddRollingNumbers() {
-        //Arrange
-        Game game = new Game();
-        game.add("Chet");
-        boolean isGameStillInProgress = true;
         //Act
         game.roll(1);
         game.wrongAnswer();
