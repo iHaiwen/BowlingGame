@@ -25,6 +25,12 @@ public class AlarmTest {
     //TODO-user-intent-test-working-on: a normal pressure value should not raise the alarm
     @Test
     public void aNormalPressureValueShouldNotRaiseTheAlarm() {
+        //Arrange
+        Alarm alarm = new Alarm();
+
+        //Act
+        alarm.check();
+
         //Assert
         Assert.assertFalse(alarm.isAlarmOn());
     }
