@@ -13,6 +13,8 @@ public class TicketDispenserTest {
         assertEquals(5, 2 + 3);
     }
 
+    //TODO-user-intent-test: a new ticket should have the turn number subsequent to the previous ticket
+    //TODO-user-intent-test: a new ticket should have the turn number subsequent to the previous ticket from another dispenser
     //TODO-new-feature: the turn number sequence of the vip customers starts from 1001
     //TODO-new-feature: the turn number sequence of the regular customers starts from 2001
 }
