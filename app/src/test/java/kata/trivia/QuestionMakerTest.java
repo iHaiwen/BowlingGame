@@ -35,39 +35,25 @@ public class QuestionMakerTest {
 
     @Test
     public void addTwoPopQuestionAndCouldRemoveTheFirstOne() {
-        //Act
-        questionMaker.addPopQuestion(POP_QUESTION_1);
-        questionMaker.addPopQuestion("Pop Question 2");
-        //Assert
-        Assert.assertEquals(POP_QUESTION_1, questionMaker.removeFirstPopQuestion());
+        //Act, Assert
+        Assert.assertEquals("Pop Question 0", questionMaker.removeFirstPopQuestion());
     }
 
     @Test
     public void addTwoScienceQuestionsAndCouldRemoveTheFirstOne() {
-        //Act
-        questionMaker.addScienceQuestion(SCIENCE_QUESTION_1);
-        questionMaker.addScienceQuestion("Science Question 2");
-        //Assert
-        Assert.assertEquals(SCIENCE_QUESTION_1, questionMaker.removeFirstScienceQuestion());
+        //Act, Assert
+        Assert.assertEquals("Science Question 0", questionMaker.removeFirstScienceQuestion());
     }
 
     @Test
     public void addTwoSportsQuestionsAndCouldRemoveTheFirstOne() {
-        //Act
-        questionMaker.addSportsQuestion(SPORTS_QUESTION_1);
-        questionMaker.addSportsQuestion("Sports Question 2");
-        //Assert
-        Assert.assertEquals(SPORTS_QUESTION_1, questionMaker.removeFirstSportsQuestion());
+        //Act, Assert
+        Assert.assertEquals("Sports Question 0", questionMaker.removeFirstSportsQuestion());
     }
 
     @Test
     public void addTwoRockQuestionsAndCouldRemoveTheFirstOne() {
-        //Arrange
-        QuestionMaker questionMaker = new QuestionMaker();
-        //Act
-        questionMaker.addRockQuestion(ROCK_QUESTION_1);
-        questionMaker.addRockQuestion("Rock Question 2");
-        //Assert
-        Assert.assertEquals(ROCK_QUESTION_1, questionMaker.removeFirstRockQuestion());
+        //Act, Assert
+        Assert.assertEquals("Rock Question 0", questionMaker.removeFirstRockQuestion());
     }
 }
