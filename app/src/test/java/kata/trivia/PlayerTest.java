@@ -4,6 +4,7 @@ import com.mobile.hw.bowlinggame.BuildConfig;
 
 import junit.framework.Assert;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricGradleTestRunner;
@@ -20,11 +21,17 @@ import org.robolectric.annotation.Config;
 @Config(constants = BuildConfig.class, emulateSdk = 21)
 public class PlayerTest {
 
+    private Player player;
+    private String category = null;
+
+    @Before
+    public void initialize() throws Exception {
+        //Arrange
+        player = new Player("Ben");
+    }
+
     @Test
     public void thePlaceShouldBe1IfThePlayerMovesForward1Step() {
-        //Arrange
-        Player player = new Player("Ben");
-
         //Act
         player.moveForwardSteps(1);
 
@@ -34,9 +41,6 @@ public class PlayerTest {
 
     @Test
     public void thePlaceShouldBe0IfThePlayerMovesForward12Steps() {
-        //Arrange
-        Player player = new Player("Ben");
-
         //Act
         player.moveForwardSteps(12);
 
@@ -46,9 +50,7 @@ public class PlayerTest {
 
     @Test
     public void theCategoryShouldBePopIfThePlayerInPlace0Or4Or8() {
-        //Arrange
-        Player player = new Player("Ben");
-        String category = "Pop";
+        category = "Pop";
 
         //Act, Assert
         player.moveForwardSteps(12);
@@ -63,9 +65,7 @@ public class PlayerTest {
 
     @Test
     public void theCategoryShouldBeScienceIfThePlayerInPlace1Or5Or9() {
-        //Arrange
-        Player player = new Player("Ben");
-        String category = "Science";
+        category = "Science";
 
         //Act, Assert
         player.moveForwardSteps(1);
@@ -80,9 +80,7 @@ public class PlayerTest {
 
     @Test
     public void theCategoryShouldBeSportsIfThePlayerInPlace2Or6Or10() {
-        //Arrange
-        Player player = new Player("Ben");
-        String category = "Sports";
+        category = "Sports";
 
         //Act, Assert
         player.moveForwardSteps(2);
@@ -96,9 +94,7 @@ public class PlayerTest {
     }
 
     public void theCategoryShouldBeRockIfThePlayerInPlace3Or7Or11() {
-        //Arrange
-        Player player = new Player("Ben");
-        String category = "Rock";
+        category = "Rock";
 
         //Act, Assert
         player.moveForwardSteps(3);
