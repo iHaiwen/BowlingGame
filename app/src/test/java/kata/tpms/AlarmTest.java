@@ -41,7 +41,7 @@ public class AlarmTest {
     public void aPressureValueOutsideTheRangeShouldRaiseTheAlarm() throws Exception {
         //Arrange
         StubSensor stubSensor = new StubSensor();
-        stubSensor.arrangeNextPressurePsiValue(Alarm.HIGH_PRESSURE_THRESHHOLD + 1);
+        stubSensor.arrangeNextPressurePsiValue(Alarm.HIGH_PRESSURE_THRESHOLD + 1);
         Alarm alarm = new Alarm(stubSensor);
 
         //Act
