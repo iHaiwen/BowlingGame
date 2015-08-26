@@ -7,7 +7,7 @@ package kata.td;
  * Mock Turn number的生成
  */
 
-public class MockTurnNumberSequence {
+public class MockTurnNumberSequence extends TurnNumberSequence {
     public void arrangeNextTurnNumber(int nextTurnNumber) {
 
     }
