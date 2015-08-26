@@ -8,7 +8,15 @@ package kata.tpms;
  */
 
 public class StubSensor implements Transducer {
-    public void arrangeNextPressurePsiValue(double nextPressureThreshold) {
 
+    private double nextPressurePsiValue;
+
+    public void arrangeNextPressurePsiValue(double nextPressureThreshold) {
+        this.nextPressurePsiValue = nextPressureThreshold;
+    }
+
+    @Override
+    public double popNextPressurePsiValue() {
+        return this.nextPressurePsiValue;
     }
 }
