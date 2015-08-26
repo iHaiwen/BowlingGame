@@ -7,7 +7,7 @@ package kata.tpms;
  * stub sensor类
  */
 
-public class StubSensor {
+public class StubSensor implements Transducer {
     public void arrangeNextPressurePsiValue(double nextPressureThreshold) {
 
     }
