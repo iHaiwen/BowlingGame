@@ -36,7 +36,6 @@ public class AlarmTest {
         Assert.assertFalse(alarm.isAlarmOn());
     }
 
-    //TODO-user-intent-test-working-on: a pressure value outside the range should raise the alarm
     @Test
     public void aPressureValueOutsideTheRangeShouldRaiseTheAlarm() throws Exception {
         //Arrange
