@@ -55,6 +55,7 @@ public class TicketDispenserTest {
 
         //Assert
         Assert.assertEquals(11, ticket.getTurnNumber());
+        mockTurnNumberSequence.verifyMethodGetNextTurnNumberCalledOne();
     }
 
     //TODO-new-feature: the turn number sequence of the vip customers starts from 1001
