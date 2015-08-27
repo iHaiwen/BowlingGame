@@ -60,26 +60,26 @@ public class TicketDispenserTest {
     @Test
     public void theNumberSequenceOfTheVipCustomersStartsFrom1001() throws Exception {
         //Arrange
-        TurnNumberSequence vipCustomerTurnNumberSequence = new TurnNumberSequence(1001);
+        TurnNumberSequence vipCustomerTurnNumberSequence = new TurnNumberSequence(TurnNumberSequence.VIP_CUSTOMER_FIRST_NUMBER);
         TicketDispenser vipCustomerTicketDispenser = new TicketDispenser(vipCustomerTurnNumberSequence);
 
         //Act
         TurnTicket ticket = vipCustomerTicketDispenser.getTurnTicket();
 
         //Assert
-        Assert.assertEquals(1001, ticket.getTurnNumber());
+        Assert.assertEquals(TurnNumberSequence.VIP_CUSTOMER_FIRST_NUMBER, ticket.getTurnNumber());
     }
 
     @Test
     public void theNumberSequenceOfTheRegularCustomersStartsFrom2001() throws Exception {
         //Arrange
-        TurnNumberSequence regularTurnNumberSequence = new TurnNumberSequence(2001);
+        TurnNumberSequence regularTurnNumberSequence = new TurnNumberSequence(TurnNumberSequence.REGULAR_CUSTOMER_FIRST_NUMBER);
         TicketDispenser regularCustomerTicketDispenser = new TicketDispenser(regularTurnNumberSequence);
 
         //Act
         TurnTicket ticket = regularCustomerTicketDispenser.getTurnTicket();
 
         //Assert
-        Assert.assertEquals(2001, ticket.getTurnNumber());
+        Assert.assertEquals(TurnNumberSequence.REGULAR_CUSTOMER_FIRST_NUMBER, ticket.getTurnNumber());
     }
 }
