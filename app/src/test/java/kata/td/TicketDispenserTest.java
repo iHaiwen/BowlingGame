@@ -44,7 +44,6 @@ public class TicketDispenserTest {
         Assert.assertEquals(1, (newTicket.getTurnNumber() - previousTicket.getTurnNumber()));
     }
 
-    //TODO-unit-test-working-on: the ticket dispenser should dispense the ticket number 11 if give a turn number 11 to it
     @Test
     public void theTicketDispenserShouldDispenseTheTicketNumber11IfGiveATurnNumber11ToIt() throws Exception {
         //Arrange
