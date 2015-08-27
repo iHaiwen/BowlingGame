@@ -20,7 +20,7 @@ public class UnicodeFileToHtmlTextConverter {
     }
 
     public UnicodeFileToHtmlTextConverter(Reader reader) {
-
+        this.reader = reader;
     }
 
     public String convertToHtml() throws IOException {
