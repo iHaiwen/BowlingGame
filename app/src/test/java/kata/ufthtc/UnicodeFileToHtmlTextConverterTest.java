@@ -9,6 +9,8 @@ import org.junit.runner.RunWith;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
 
+import java.io.StringReader;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -27,7 +29,9 @@ public class UnicodeFileToHtmlTextConverterTest {
     //TODO-user-intent-test-working-on: should convert ampersand
     @Test
     public void shouldConvertAmpersand() throws Exception {
-        //Assert
+        //Arrange
+        UnicodeFileToHtmlTextConverter converter = new UnicodeFileToHtmlTextConverter(new StringReader("H&M"));
+        //Act, Assert
         Assert.assertEquals("", converter.convertToHtml());
     }
 
