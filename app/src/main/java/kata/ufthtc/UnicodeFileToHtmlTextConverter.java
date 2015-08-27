@@ -13,6 +13,7 @@ import java.io.StringReader;
  */
 public class UnicodeFileToHtmlTextConverter {
     private String fullFilenameWithPath;
+    private java.io.Reader reader;
 
     public UnicodeFileToHtmlTextConverter(String fullFilenameWithPath) {
         this.fullFilenameWithPath = fullFilenameWithPath;
