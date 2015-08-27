@@ -70,5 +70,10 @@ public class TicketDispenserTest {
         Assert.assertEquals(1001, ticket.getTurnNumber());
     }
 
-    //TODO-new-feature: the turn number sequence of the regular customers starts from 2001
+    //TODO-new-feature-working-on: the turn number sequence of the regular customers starts from 2001
+    @Test
+    public void theNumberSequenceOfTheRegularCustomersStartsFrom2001() throws Exception {
+        //Assert
+        Assert.assertEquals(2001, ticket.getTurnNumber());
+    }
 }
