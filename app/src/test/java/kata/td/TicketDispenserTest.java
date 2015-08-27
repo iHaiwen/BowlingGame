@@ -58,5 +58,11 @@ public class TicketDispenserTest {
     }
 
     //TODO-new-feature-working-on: the turn number sequence of the vip customers starts from 1001
+    @Test
+    public void theNumberSequenceOfTheVipCustomersStartsFrom1001() throws Exception {
+        //Assert
+        Assert.assertEquals(1001, ticket.getTurnNumber());
+    }
+
     //TODO-new-feature: the turn number sequence of the regular customers starts from 2001
 }
