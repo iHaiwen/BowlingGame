@@ -32,7 +32,7 @@ public class UnicodeFileToHtmlTextConverterTest {
         //Arrange
         UnicodeFileToHtmlTextConverter converter = new UnicodeFileToHtmlTextConverter(new StringReader("H&M"));
         //Act, Assert
-        Assert.assertEquals("", converter.convertToHtml());
+        Assert.assertEquals("H&amp;M<br />", converter.convertToHtml());
     }
 
     //TODO-user-intent-test: should convert greater than and less than
