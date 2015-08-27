@@ -57,7 +57,6 @@ public class TicketDispenserTest {
         mockTurnNumberSequence.verifyMethodGetNextTurnNumberCalledOne();
     }
 
-    //TODO-new-feature-working-on: the turn number sequence of the vip customers starts from 1001
     @Test
     public void theNumberSequenceOfTheVipCustomersStartsFrom1001() throws Exception {
         //Arrange
