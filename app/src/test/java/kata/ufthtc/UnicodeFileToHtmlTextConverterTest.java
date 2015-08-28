@@ -26,7 +26,6 @@ public class UnicodeFileToHtmlTextConverterTest {
     }
 
     //TODO-new-feature: Make the UnicodeFileToHtmlTextConverter working on for not only a file but also a string
-    //TODO-user-intent-test-working-on: should convert ampersand
     @Test
     public void shouldConvertAmpersand() throws Exception {
         //Arrange
