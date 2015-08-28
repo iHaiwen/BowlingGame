@@ -14,6 +14,7 @@ import java.io.StringReader;
  */
 public class UnicodeFileToHtmlTextConverter {
     private java.io.Reader reader;
+    private StringEscaper stringEscaper;
 
     public UnicodeFileToHtmlTextConverter(String fullFilenameWithPath) throws FileNotFoundException {
         this.reader = new FileReader(fullFilenameWithPath);
