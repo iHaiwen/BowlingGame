@@ -1,5 +1,7 @@
 package kata.ufthtc;
 
+import org.apache.commons.lang.StringEscapeUtils;
+
 /**
  * Author: haiwen.li
  * Time: 8/28/15 10:22 AM
@@ -10,6 +12,6 @@ package kata.ufthtc;
 public class StringEscaper {
 
     public String escapeHtml(String originalString) {
-        return null;
+        return StringEscapeUtils.escapeHtml(originalString);
     }
 }
