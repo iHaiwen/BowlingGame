@@ -23,6 +23,10 @@ public class UnicodeFileToHtmlTextConverter {
         this.reader = reader;
     }
 
+    public UnicodeFileToHtmlTextConverter(Reader reader, StringEscaper stringEscaper) {
+
+    }
+
     public String convertToHtml() throws IOException {
         BufferedReader reader = new BufferedReader(this.reader);
 
