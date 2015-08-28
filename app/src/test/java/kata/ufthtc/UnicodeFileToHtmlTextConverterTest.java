@@ -43,7 +43,6 @@ public class UnicodeFileToHtmlTextConverterTest {
         Assert.assertEquals("&gt;_&lt;|||<br />", converter.convertToHtml());
     }
 
-    //TODO-user-intent-test-working-on: should add a line break for new line
     @Test
     public void shouldAddALineBreakForNewLine() throws Exception {
         //Arrange
