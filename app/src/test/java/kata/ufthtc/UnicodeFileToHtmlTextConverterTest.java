@@ -43,5 +43,13 @@ public class UnicodeFileToHtmlTextConverterTest {
         Assert.assertEquals("&gt;_&lt;|||<br />", converter.convertToHtml());
     }
 
-    //TODO-user-intent-test: should add a line break for new line
+    //TODO-user-intent-test-working-on: should add a line break for new line
+    @Test
+    public void shouldAddALineBreakForNewLine() throws Exception {
+        //Arrange
+        UnicodeFileToHtmlTextConverter converter = new UnicodeFileToHtmlTextConverter(new StringReader("Cheers\nBen Wu"));
+
+        //Act, Assert
+        Assert.assertEquals("Cheers<br />Ben Wu<br />", converter.convertToHtml());
+    }
 }
