@@ -35,6 +35,13 @@ public class UnicodeFileToHtmlTextConverterTest {
         Assert.assertEquals("H&amp;M<br />", converter.convertToHtml());
     }
 
-    //TODO-user-intent-test: should convert greater than and less than
+    @Test
+    public void shouldConvertGreaterThanAndLessThan() throws Exception {
+        //Arrange
+        UnicodeFileToHtmlTextConverter converter = new UnicodeFileToHtmlTextConverter(new StringReader(">_<|||"));
+        //Act, Assert
+        Assert.assertEquals("&gt;_&lt;|||<br />", converter.convertToHtml());
+    }
+
     //TODO-user-intent-test: should add a line break for new line
 }
