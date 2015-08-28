@@ -8,4 +8,8 @@ package kata.ufthtc;
  */
 
 public class StringEscaper {
+
+    public String escapeHtml(String originalString) {
+        return null;
+    }
 }
