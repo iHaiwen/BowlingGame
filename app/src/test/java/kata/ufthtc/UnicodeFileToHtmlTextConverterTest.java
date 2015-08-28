@@ -50,4 +50,14 @@ public class UnicodeFileToHtmlTextConverterTest {
         //Act, Assert
         Assert.assertEquals("Cheers<br />Ben Wu<br />", converter.convertToHtml());
     }
+
+    @Test
+    public void shouldConvertAmpersandUsingStringEscaper() throws Exception {
+        //Arrange
+        StringEscaper stringEscaper = new StringEscaper();
+        UnicodeFileToHtmlTextConverter converter = new UnicodeFileToHtmlTextConverter(new StringReader("H&M"), stringEscaper);
+
+        //Act, Assert
+        Assert.assertEquals("H&amp;M<br />", converter.convertToHtml());
+    }
 }
